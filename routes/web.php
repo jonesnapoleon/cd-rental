@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +13,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/', function () {
+    return "<a href='/cd'>Go to CD list</a>";
+});
+
+$router->group(['prefix' => 'cd'], function () use ($router) {
+    $router->get('/', 'CDController@showAll');
+    $router->get('/{id}', 'CDController@get');
+    $router->post('/', 'CDController@store');
+    $router->put('/{id}', 'CDController@update');
+    $router->delete('/', 'CDController@delete');
 });
