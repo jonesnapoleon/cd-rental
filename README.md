@@ -16,9 +16,6 @@ Then open browser and start typing ```localhost:8000```
 ## Contributor
 Jones Napoleon Autumn
 
-## Purpose
-For Jojonomics preliminary backend project test
-
 ## Official Documentation
 
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
